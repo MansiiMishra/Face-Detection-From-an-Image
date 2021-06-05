@@ -6,7 +6,7 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 img = cv2.imread('Test2.jpg')
 #Converting to grey scale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-#Allowing multiple face detection
+#Allowing multiple scale(Multiple size) detection
 faces = face_cascade.detectMultiScale(gray, 1.1, 6)
 #Creating Rectangle around face
 for(x, y, w, h) in faces:
